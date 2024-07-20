@@ -1,6 +1,7 @@
 import React from 'react'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDiscord, faGithubSquare, faInstagram, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
+import { Button } from './ui/button';
 
 const HeroSection = () => {
   return (
@@ -20,7 +21,9 @@ const HeroSection = () => {
               <span>Azure Dev-Ops</span>
 	   			  </p>
 
-             <a className="button stroke smoothscroll" href="#about" title="">More About Me</a>
+            <Button className='bg-transparent mt-4 rounded-none h-12 px-8
+             border-pink-600 border-2 text-md hover:bg-pink-700 hover:text-white'
+              title=''>More about me</Button>
           </div>
         </div>
       </div>
