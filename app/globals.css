@@ -219,6 +219,12 @@ html {
 	letter-spacing: .4rem;
 }
 
+#about {
+	background: #FFFFFF;
+	padding-top: 12rem;
+	padding-bottom: 15rem;
+}
+
 @media only screen and (max-width:1024px) {
 	.intro-content h1 {
 		font-size: 5rem;
