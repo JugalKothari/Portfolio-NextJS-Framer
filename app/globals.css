@@ -221,8 +221,8 @@ html {
 
 #about {
 	background: #FFFFFF;
-	padding-top: 12rem;
-	padding-bottom: 15rem;
+	padding-top: 6rem;
+	padding-bottom: 6rem;
 }
 
 @media only screen and (max-width:1024px) {
