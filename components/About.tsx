@@ -6,14 +6,14 @@ const About = React.forwardRef<HTMLDivElement>((_, ref) => {
     <section id="about" ref={ref}>
       <div className="row section-intro">
         <div className="col-twelve">
-          <h5>About</h5>
-          <h3 className="font-serif text-3xl mb-2">Let me introduce myself.</h3>
+          <h3>About</h3>
+          <h5 className="font-serif text-3xl mb-2">Let me introduce myself.</h5>
           <div className="intro-info">
-            <p className="lead">
+            <p>
               I am a passionate and driven Computer Science Engineering student currently in my final year at PES University.
             </p>
-            <Profile />
           </div>
+          <Profile />
         </div>
       </div>
     </section>

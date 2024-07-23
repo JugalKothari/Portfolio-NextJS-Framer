@@ -6,8 +6,8 @@ const Resume = React.forwardRef<HTMLDivElement>((_, ref) => {
     <section id="resume" ref={ref}>
         <div className="row section-intro">
    		    <div>
-                <h5>Resume</h5>
-                <h3 className="font-serif text-3xl">More about my experiences.</h3>
+                <h3>Resume</h3>
+                <h5 className="font-serif text-3xl">More about my experiences.</h5>
    		    </div>
    	    </div>
         <div className='flex justify-center items-center'>
