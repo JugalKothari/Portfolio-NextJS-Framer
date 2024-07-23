@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { CardStack } from "../components/ui/card-stack";
+import { Highlight } from "./ui/hero-highlight";
 
 const profile = {
   fullname: "Jugal Kothari",
@@ -10,9 +11,21 @@ const profile = {
 };
 
 const experiences = [
-  "Kshana.AI: June - July, 2024 - Software Engineering Intern",
-  "HPE-CTY Program: Feb - May, 2024 - CTY Project Team Member",
-  "Center for Data Science and Machine Learning, PES University: June - July, 2023 - Research Internship"
+  {
+    company: "Kshana.AI",
+    duration: "June - July, 2024",
+    role: "Software Engineering Intern"
+  },
+  {
+    company: "HPE-CTY Program",
+    duration: "Feb - May, 2024",
+    role: "CTY Project Team Member"
+  },
+  {
+    company: "Center for Data Science and Machine Learning, PES University",
+    duration: "June - July, 2023",
+    role: "Research Internship"
+  }
 ];
 
 const CARDS = [
@@ -21,21 +34,21 @@ const CARDS = [
     name: "Profile",
     designation: "",
     content: (
-      <div>
-        <div className="flex mb-2">
-          <strong className="w-28 font-semibold">Fullname:</strong>
+      <div className="text-lg flex flex-col justify-center">
+        <div className="mb-2">
+          <strong className="w-28 font-semibold">Fullname: </strong>
           <span className="text-gray-500">{profile.fullname}</span>
         </div>
-        <div className="flex mb-2">
-          <strong className="w-28 font-semibold">Birth Date:</strong>
+        <div className="mb-2">
+          <strong className="w-28 font-semibold">Birth Date: </strong>
           <span className="text-gray-500">{profile.birthDate}</span>
         </div>
-        <div className="flex mb-2">
-          <strong className="w-28 font-semibold">College:</strong>
+        <div className="mb-2">
+          <strong className="w-28 font-semibold">College: </strong>
           <span className="text-gray-500">{profile.college}</span>
         </div>
-        <div className="flex mb-2">
-          <strong className="w-28 font-semibold">Email:</strong>
+        <div className="mb-2">
+          <strong className="w-28 font-semibold">Email: </strong>
           <span className="text-gray-500">{profile.email}</span>
         </div>
       </div>
@@ -48,7 +61,9 @@ const CARDS = [
     content: (
       <ul className="list-disc list-inside space-y-1">
         {experiences.map((exp, index) => (
-          <li key={index}>{exp}</li>
+          <li key={index}>
+            <Highlight className="text-black">{exp.company}</Highlight>: {exp.duration} - {exp.role}
+          </li>
         ))}
       </ul>
     ),
