@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
 import { CardStack } from "../components/ui/card-stack";
-import { cn } from "@/lib/utils";
 
 const profile = {
   fullname: "Jugal Kothari",
@@ -11,9 +10,9 @@ const profile = {
 };
 
 const experiences = [
-  "Kshana.AI: Developing APIs using FastAPI in Python, Container Monitoring on Microsoft Azure",
-  "HPE-CTY Program: Developed a Gen-AI based solution to automate code optimization in Python by creating an adaptive layer for an existing LLM (Llama-3 8B).",
-  "Extensive experience in Machine Learning gained during a two-month research internship at CDSMAL, PES University."
+  "Kshana.AI: June - July, 2024 - Software Engineering Intern",
+  "HPE-CTY Program: Feb - May, 2024 - CTY Project Team Member",
+  "Center for Data Science and Machine Learning, PES University: June - July, 2023 - Research Internship"
 ];
 
 const CARDS = [
