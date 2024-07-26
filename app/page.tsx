@@ -4,6 +4,7 @@ import About from "@/components/About";
 import HeroSection from "@/components/HeroSection";
 import Navbar from "@/components/Navbar";
 import Resume from '@/components/Resume';
+import Projects from '@/components/Projects';
 
 export default function Home() {
   const aboutRef = useRef<HTMLDivElement>(null);
@@ -17,6 +18,12 @@ export default function Home() {
   const scrollToResume = () => {
     resumeRef.current?.scrollIntoView({ behavior: 'smooth'});
   }
+  
+  const projectsRef = useRef<HTMLDivElement>(null);
+
+  const scrollToProfile = () => {
+    projectsRef.current?.scrollIntoView({ behavior: 'smooth'});
+  }
 
   return (
     <main className="relative flex justify-center items-center flex-col">
@@ -25,6 +32,7 @@ export default function Home() {
         <HeroSection scrollToAbout={scrollToAbout} />
         <About ref={aboutRef} />
         <Resume ref={resumeRef} />
+        <Projects/>
       </div>
     </main>
   );
