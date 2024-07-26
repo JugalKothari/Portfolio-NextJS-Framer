@@ -1,4 +1,3 @@
-import { color } from 'framer-motion';
 import React, { useState } from 'react';
 import { ContactForm } from './ContactForm';
 

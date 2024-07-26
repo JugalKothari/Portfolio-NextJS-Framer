@@ -3,12 +3,24 @@ import React from "react";
 import { Label } from "./ui/label";
 import { Input } from "./ui/input";
 import { cn } from "@/lib/utils";
+import { useState } from "react";
 
 export function ContactForm() {
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    console.log("Form submitted");
-  };
+    const [formStatus, setFormStatus] = useState<'idle' | 'success' | 'error'>('idle');
+    const [formData, setFormData] = useState({ name: '', email: '', message: '' });
+  
+    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+      e.preventDefault();
+      
+      // Simulate form submission
+      setFormStatus('success');
+      setTimeout(() => {
+        setFormStatus('idle'); // Reset status after 3 seconds
+        setFormData({name: '', email: '', message: ''})
+      }, 10000);
+      
+      console.log("Form submitted", formData);
+    };
   return (
     <div className="max-w-md w-full mx-auto rounded-none md:rounded-2xl p-4 md:p-8 shadow-input bg-white dark:bg-black">
       <h2 className="font-bold text-xl text-neutral-800 dark:text-neutral-200">
@@ -17,16 +29,22 @@ export function ContactForm() {
 
       <form className="my-8" onSubmit={handleSubmit}>
         <LabelInputContainer className="mb-4">
-          <Label htmlFor="firstname">Name</Label>
-          <Input id="firstname" placeholder="Name" type="text" required />
+          <Label htmlFor="name">Name</Label>
+          <Input id="name" placeholder="Name" type="text" required 
+          value={formData.name}
+          onChange={(e) => setFormData({ ...formData, name: e.target.value })} />
         </LabelInputContainer>
         <LabelInputContainer className="mb-4">
           <Label htmlFor="email">Email Address</Label>
-          <Input id="email" placeholder="youremailid@gmail.com" type="email" required />
+          <Input id="email" placeholder="youremailid@gmail.com" type="email" required
+          value={formData.email}
+          onChange={(e) => setFormData({ ...formData, email: e.target.value })} />
         </LabelInputContainer>
         <LabelInputContainer className="mb-8">
           <Label htmlFor="message">Message</Label>
-          <Input id="message" placeholder="Message" type="text" required />
+          <Input id="message" placeholder="Message" type="text" required
+          value={formData.message}
+          onChange={(e) => setFormData({ ...formData, message: e.target.value })} />
         </LabelInputContainer>
 
         <button
@@ -36,6 +54,12 @@ export function ContactForm() {
           Submit &rarr;
           <BottomGradient />
         </button>
+
+        {formStatus === 'success' && (
+          <div className="mt-4 p-4 bg-green-100 text-green-800 border border-green-300 rounded-md">
+            Your message was sent, thank you!
+          </div>
+        )}
 
       </form>
     </div>
