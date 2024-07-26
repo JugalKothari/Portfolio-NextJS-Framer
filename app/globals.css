@@ -226,7 +226,7 @@ html {
 }
 
 #resume {
-	background: #dcdbdb;
+	background: #151515 url(../components/images/resume-bg-img.jpg) no-repeat center bottom;
 	padding-top: 4rem;
 	padding-bottom: 4rem;
 }
