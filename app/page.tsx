@@ -6,6 +6,7 @@ import Navbar from "@/components/Navbar";
 import Resume from '@/components/Resume';
 import Projects from '@/components/Projects';
 import Contact from '@/components/Contact';
+import ScrollToTop from 'react-scroll-to-top'
 
 export default function Home() {
   const aboutRef = useRef<HTMLDivElement>(null);
@@ -38,8 +39,9 @@ export default function Home() {
         <HeroSection scrollToAbout={scrollToAbout} />
         <About ref={aboutRef} />
         <Resume ref={resumeRef} />
-        <Projects ref={projectsRef}/>
-        <Contact ref={contactRef}/>
+        <Projects ref={projectsRef} />
+        <Contact ref={contactRef} />
+        <ScrollToTop smooth viewBox='0 0 150 300'/>
       </div>
     </main>
   );
