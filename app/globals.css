@@ -71,7 +71,7 @@
 html {
 	scroll-behavior: smooth;
   }
-#intro {
+#home {
 	background: #151515 url(../components/images/intro-img.jpg) no-repeat center bottom;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;

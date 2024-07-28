@@ -9,6 +9,12 @@ import Contact from '@/components/Contact';
 import ScrollToTop from 'react-scroll-to-top'
 
 export default function Home() {
+  const homeRef = useRef<HTMLDivElement>(null);
+
+  const scrollToHome = () => {
+    homeRef.current?.scrollIntoView({ behavior: 'smooth'})
+  }
+
   const aboutRef = useRef<HTMLDivElement>(null);
 
   const scrollToAbout = () => {
@@ -36,7 +42,7 @@ export default function Home() {
     <main className="relative flex justify-center items-center flex-col">
       <div className="max-w-7xl w-full">
         <Navbar />
-        <HeroSection scrollToAbout={scrollToAbout} />
+        <HeroSection ref={homeRef} scrollToAbout={scrollToAbout}/>
         <About ref={aboutRef} />
         <Resume ref={resumeRef} />
         <Projects ref={projectsRef} />

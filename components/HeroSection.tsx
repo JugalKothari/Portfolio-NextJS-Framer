@@ -9,8 +9,11 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip"
 
+interface HeroSectionProps{
+  scrollToAbout: () => void;
+}
 
-const HeroSection = ({ scrollToAbout }: { scrollToAbout: () => void }) => {
+const HeroSection = React.forwardRef<HTMLDivElement, HeroSectionProps>(({ scrollToAbout }, ref) => {
   
   const socialLinks = {
     github: "https://github.com/JugalKothari",
@@ -20,7 +23,7 @@ const HeroSection = ({ scrollToAbout }: { scrollToAbout: () => void }) => {
   };
 
   return (
-    <section id='intro'>
+    <section id='home'>
       <div className='intro-overlay'></div>
 
       <div className='intro-content'>
@@ -62,6 +65,8 @@ const HeroSection = ({ scrollToAbout }: { scrollToAbout: () => void }) => {
       </ul> 
     </section>
   )
-}
+});
+
+HeroSection.displayName = "HeroSection";
 
 export default HeroSection;

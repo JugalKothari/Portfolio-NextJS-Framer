@@ -2,7 +2,7 @@ import React from 'react';
 
 const Navbar = () => {
   return (
-    <nav className="absolute w-full bg-black text-white z-10">
+    <nav className="fixed w-full bg-black text-white z-10">
       <ul className="flex justify-center space-x-4 py-4">
         <li className="flex items-center">
           <a href="#home" className="px-4 hover:text-pink-600">Home</a>
