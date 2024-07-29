@@ -17,8 +17,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${inter.className} bg-yellow-50 overflow-auto`}>
+    <html lang="en" className="w-full h-full">
+      <body className={`${inter.className} bg-yellow-50 overflow-auto w-full h-full`}>
         <ThemeProvider
             attribute="class"
             defaultTheme="light"

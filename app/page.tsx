@@ -39,8 +39,8 @@ export default function Home() {
   }
 
   return (
-    <main className="relative flex justify-center items-center flex-col">
-      <div className="max-w-7xl w-full">
+    <main className="w-full h-full">
+      <div className="w-full">
         <Navbar />
         <HeroSection ref={homeRef} scrollToAbout={scrollToAbout}/>
         <About ref={aboutRef} />
