@@ -27,7 +27,7 @@ export function ContactForm() {
         Please drop a message so I can get back to you ASAP:)
       </h2>
 
-      <form className="my-8" onSubmit={handleSubmit} data-netlify="true">
+      <form className="my-8" onSubmit={handleSubmit}>
         <LabelInputContainer className="mb-4">
           <Label htmlFor="name">Name</Label>
           <Input id="name" placeholder="Name" type="text" required 
