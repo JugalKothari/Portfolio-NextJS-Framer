@@ -43,14 +43,6 @@ export const TypewriterEffectSmooth = ({
         )}
       >
         {text}
-        <motion.span
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.5, repeat: Infinity, repeatType: "reverse" }}
-          className={cn(
-            "inline-block rounded-sm w-[4px] h-4 sm:h-6 xl:h-12 bg-pink-500",
-          )}
-        ></motion.span>
       </motion.div>
     </div>
   );
