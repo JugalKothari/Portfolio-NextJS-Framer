@@ -1,12 +1,6 @@
 import React from "react";
 import { BentoGrid, BentoGridItem } from "./ui/bento-grid";
 import Image from "next/image";
-// import {
-//   IconClipboardCopy,
-//   IconFileBroken,
-//   IconSignature,
-//   IconTableColumn,
-// } from "@tabler/icons-react";
 
 const Projects = React.forwardRef<HTMLDivElement>((_, ref) => {
   return (
@@ -25,6 +19,7 @@ const Projects = React.forwardRef<HTMLDivElement>((_, ref) => {
             description={item.description}
             header={item.header}
             className={item.className}
+            githublink={item.githublink}
             />
       ))}
     </BentoGrid>
@@ -34,10 +29,6 @@ const Projects = React.forwardRef<HTMLDivElement>((_, ref) => {
 
 Projects.displayName = "Projects"
 
-const Skeleton = () => (
-  <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl   dark:bg-dot-white/[0.2] bg-dot-black/[0.2] [mask-image:radial-gradient(ellipse_at_center,white,transparent)]  border border-transparent dark:border-white/[0.2] bg-neutral-100 dark:bg-black">
-  </div>
-);
 const items = [
   {
     title: "Sports Department Management System",
@@ -48,6 +39,7 @@ const items = [
                     height={100}
                     className="flex flex-1 w-full h-full min-h-[6rem]"/>,
     className: "md:col-span-2",
+    githublink: "https://github.com/JugalKothari/Sports-Department-Management-System",
   },
   {
     title: "YAKt-Yet-Another-KRaft",
@@ -58,6 +50,7 @@ const items = [
                     height={100}
                     className="flex flex-1 w-full h-full min-h-[6rem]"/>,
     className: "md:col-span-1",
+    githublink: "https://github.com/JugalKothari/YAKt-Yet-Another-KRaft",
   },
   {
     title: "Socket-TicTacToe",
@@ -69,6 +62,7 @@ const items = [
                 height={100}
                 className="flex flex-1 w-full h-full min-h-[6rem]"/>,
     className: "md:col-span-1",
+    githublink: "https://github.com/JugalKothari/Socket-TicTacToe",
   },
   {
     title: "Charity Donation Blockchain System",
@@ -79,6 +73,7 @@ const items = [
     height={100}
     className="flex flex-1 w-full h-full min-h-[6rem]"/>,
     className: "md:col-span-2",
+    githublink: "https://github.com/JugalKothari/Charity-Donation-Blockchain-System",
   },
   {
     title: "WebScanner",
@@ -89,6 +84,7 @@ const items = [
     height={100}
     className="flex flex-1 w-full h-full min-h-[6rem]"/>,
     className: "md:col-span-2",
+    githublink: "https://github.com/JugalKothari/WebScanner",
   },
   {
     title: "Hospital Management System Java Springboot",
@@ -100,6 +96,7 @@ const items = [
                     height={100}
                     className="flex flex-1 w-full h-full min-h-[6rem]"/>,
     className: "md:col-span-1",
+    githublink: "https://github.com/JugalKothari/Hospital-Management-System-Java-SpringBoot",
   },
 ];
 
