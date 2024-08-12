@@ -24,7 +24,7 @@ export const TypewriterEffectSmooth = ({
       setCurrentIndex((prev) => (prev + 1) % words.length);
     };
 
-    const timer = setTimeout(changeText, 3000); // Duration to show each word before transitioning
+    const timer = setTimeout(changeText, 2000); // Duration to show each word before transitioning
 
     return () => clearTimeout(timer);
   }, [currentIndex, words]);
