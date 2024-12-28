@@ -18,6 +18,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="w-full h-full">
+      <head>
+      <meta name="google-site-verification" content="MiB0EoQsLG9HnB1qiD2YknXcc_9LHXblpl5kcEKMigo" />
+      </head>
       <body className={`${inter.className} bg-yellow-50 overflow-auto w-full h-full`}>
         <ThemeProvider
             attribute="class"
