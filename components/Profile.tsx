@@ -5,9 +5,7 @@ import { Highlight } from "./ui/hero-highlight";
 
 const profile = {
   fullname: "Jugal Kothari",
-  birthDate: "April 22, 2003",
   college: "PES University",
-  email: "jugalprakashk19@gmail.com",
 };
 
 const experiences = [
@@ -39,18 +37,18 @@ const CARDS = [
           <strong className="w-28 font-semibold">Fullname: </strong>
           <span className="text-gray-500">{profile.fullname}</span>
         </div>
-        <div className="mb-2">
+        {/* <div className="mb-2">
           <strong className="w-28 font-semibold">Birth Date: </strong>
           <span className="text-gray-500">{profile.birthDate}</span>
-        </div>
+        </div> */}
         <div className="mb-2">
           <strong className="w-28 font-semibold">College: </strong>
           <span className="text-gray-500">{profile.college}</span>
         </div>
-        <div className="mb-2">
+        {/* <div className="mb-2">
           <strong className="w-28 font-semibold">Email: </strong>
           <span className="text-gray-500">{profile.email}</span>
-        </div>
+        </div> */}
       </div>
     ),
   },
