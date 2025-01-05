@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "My Portfolio Website",
-  description: "Crazy mind blowing portfolio of Jugal Kothari",
+  description: "Crazy portfolio of Jugal Kothari",
 };
 
 export default function RootLayout({
@@ -20,6 +20,7 @@ export default function RootLayout({
     <html lang="en" className="w-full h-full">
       <head>
       <meta name="google-site-verification" content="MiB0EoQsLG9HnB1qiD2YknXcc_9LHXblpl5kcEKMigo" />
+      <meta name="description" content="Jugal Kothari's portfolio website!" />
       </head>
       <body className={`${inter.className} bg-yellow-50 overflow-auto w-full h-full`}>
         <ThemeProvider
