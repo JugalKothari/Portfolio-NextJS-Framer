@@ -21,6 +21,7 @@ export default function RootLayout({
       <head>
       <meta name="google-site-verification" content="MiB0EoQsLG9HnB1qiD2YknXcc_9LHXblpl5kcEKMigo" />
       <meta name="description" content="Jugal Kothari's portfolio website!" />
+      <meta name="robots" content="noindex"/>
       </head>
       <body className={`${inter.className} bg-yellow-50 overflow-auto w-full h-full`}>
         <ThemeProvider
